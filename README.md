@@ -1,2 +1,6 @@
 # Rust Interview Handbook
-Curated Rust interview preparation materials for busy software engineers. Submit a PR if you know Rust interview questions
+
+#### Send me a PR if you know Rust's interview questions
+
+Thank you for adding a Rust interview question and answer. 
+
