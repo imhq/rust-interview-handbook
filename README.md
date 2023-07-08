@@ -7,7 +7,7 @@ Rust is a modern computer programming language developed by Mozilla in 2010. It 
 
 Rust is a statically compiled language with a rich type system and ownership model. It can be used to power performance-critical services while guaranteeing memory safety and thread safety, empowering developers to debug at compile-time. In addition to that Rust has great documentation and a user-friendly compiler with top-end tools like integrated package managers and multi-editor with features like type inspection and auto-completion. 
 
-Rust prevents all crashes, and it is very interesting that Rust is safe by default like JavaScript, Ruby, and Python. This is much more powerful than C/C++ because we cannot write the wrong parallel code you can never see fault in rust. It is very fast in representing a lot of programming paradigms very well. 
+Rust prevents all crashes, and, interestingly, Rust is safe by default like JavaScript, Ruby, and Python. This is much more powerful than C/C++ because we cannot write the wrong parallel code you can never see fault in rust. It is very fast in representing a lot of programming paradigms very well. 
 
 ## Interview Questions
 
@@ -16,7 +16,7 @@ Rust prevents all crashes, and it is very interesting that Rust is safe by defau
 
       Here are some key features and concepts of Rust:
 
-   + **Memory Safety:** Rust's most distinctive feature is its own system, which enables fine-grained control over memory allocation and deallocation. It ensures memory safety without relying on garbage collection. The ownership system prevents common issues like null pointer dereferences, dangling pointers, and data races.
+   + **Memory Safety:** Rust's most distinctive feature is its system, which enables fine-grained control over memory allocation and deallocation. It ensures memory safety without relying on garbage collection. The ownership system prevents common issues like null pointer dereferences, dangling pointers, and data races.
 
    + **Concurrency:** Rust provides powerful concurrency primitives, including threads, message passing, and shared-state concurrency. It enforces strict rules at compile-time to prevent data races and ensures thread safety.
 
@@ -133,7 +133,7 @@ Rust prevents all crashes, and it is very interesting that Rust is safe by defau
     +  Implement an unsafe trait.
     +  Access fields of `union` Remember that unsafe doesn’t turn off the borrow checker or disable any other of Rust’s safety checks: if you use a reference in unsafe code, it will still be checked.
 
-# Social Media #
+## Social Media
 [![Github](https://img.shields.io/badge/-Github-000?style=flat&logo=Github&logoColor=white)](https://github.com/imhq)
 [![Twitter URL](https://img.shields.io/twitter/url/https/twitter.com/bukotsunikki.svg?style=social&label=Follow%20%40bukotsunikki)](https://twitter.com/intmainhq)
 
