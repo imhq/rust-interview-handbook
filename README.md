@@ -135,5 +135,5 @@ Rust prevents all crashes, and, interestingly, Rust is safe by default like Java
 
 ## Social Media
 [![Github](https://img.shields.io/badge/-Github-000?style=flat&logo=Github&logoColor=white)](https://github.com/imhq)
-[![Twitter URL](https://img.shields.io/twitter/url/https/twitter.com/bukotsunikki.svg?style=social&label=Follow%20%40bukotsunikki)](https://twitter.com/intmainhq)
+[![Twitter URL](https://img.shields.io/twitter/url/https/twitter.com/intmainhq.svg?style=social&label=Follow%20%40bukotsunikki)](https://twitter.com/intmainhq)
 
