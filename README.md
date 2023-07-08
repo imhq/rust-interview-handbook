@@ -3,23 +3,44 @@
 Send me a PR if you know of any of Rust's interview questions
 
 ## Overview
-Rust is a modern computer programming language developed by Mozilla in 2010. It was initially developed to tackle the issue of invalid memory access faced by C and C++ developers while building applications. If you are looking for the
+Rust is a modern computer programming language developed by Mozilla in 2010. It was initially developed to tackle the issue of invalid memory access faced by C and C++ developers while building applications. 
+
+Rust is a statically compiled language with a rich type system and ownership model. It can be used to power performance-critical services while guaranteeing memory safety and thread safety, empowering developers to debug at compile-time. In addition to that Rust has great documentation and a user-friendly compiler with top-end tools like integrated package managers and multi-editor with features like type inspection and auto-completion. 
+
+Rust prevents all crashes, and it is very interesting that Rust is safe by default like JavaScript, Ruby, and Python. This is much more powerful than C/C++ because we cannot write the wrong parallel code you can never see fault in rust. It is very fast in representing a lot of programming paradigms very well. 
 
 ## Interview Questions
 
 1. #### What is Rust?
-   Rust is a systems programming language that focuses on safety, concurrency, and performance.
+   Rust is a systems programming language that focuses on safety, concurrency, and performance. It was developed by Mozilla Research and first appeared in 2010. Rust aims to address common pitfalls in programming, such as memory safety issues, data races, and undefined behavior, often found in languages like C and C++. 
+
+      Here are some key features and concepts of Rust:
+
+   + **Memory Safety:** Rust's most distinctive feature is its own system, which enables fine-grained control over memory allocation and deallocation. It ensures memory safety without relying on garbage collection. The ownership system prevents common issues like null pointer dereferences, dangling pointers, and data races.
+
+   + **Concurrency:** Rust provides powerful concurrency primitives, including threads, message passing, and shared-state concurrency. It enforces strict rules at compile-time to prevent data races and ensures thread safety.
+
+   + **Performance:** Rust is designed for high-performance systems programming. It provides control over low-level details while ensuring safety. Its zero-cost abstractions allow high-level code to have the same performance as equivalent low-level code.
+
+   + **Expressive Type System:** Rust has a strong and expressive type system. It includes features like pattern matching, algebraic data types, and generics, allowing developers to write generic and reusable code. The type inference system reduces the need for explicit type annotations.
+
+   + **Error Handling:** Rust has a robust error handling mechanism based on the "Result" type and the "Option" type. This approach encourages developers to handle errors explicitly and helps avoid unexpected runtime errors.
+
+   + **Cargo:** Rust's package manager and build system, called Cargo, simplifies dependency management and building projects. It provides tools for testing, documentation generation, and benchmarking, making it easier to develop and maintain Rust projects.
+
+   + **Community and Ecosystem:** Rust has a vibrant and growing community. It has an extensive ecosystem of libraries and frameworks, known as "crates," which cover a wide range of domains. The Rust community is known for its helpfulness and focus on education.
    
-2. #### What is the cargo and what are the most popular cargo commands?
+   
+3. #### What is the cargo and what are the most popular cargo commands?
    [Cargo](https://doc.rust-lang.org/cargo/) is the Rust package manager that can download dependencies, compile the project, make distributable packages, and upload them to the Rust community's package registry creates.io. The most popular cargo commands are:
-    1.  Create a new package that builds an executable: `cargo new IntmainApp`
-    2.  Create a new package that builds a library: `cargo new --lib IntmainLib`
-    3.  Build a package and all its dependencies: `cargo build`
-    4.  Build a package with optimization: `cargo build -- release`
-    5.  Run a binary of local package: `cargo run`.  Arguments to the binary are followed by two dashes (--): `cargo run -- args`
-    6.  Remove generated artifacts from the target directory: `cargo clean`
-    7.  Display a tree of dependencies in the project: `cargo tree`
-    8.  Compile and execute unit, integration, and documentation tests: `cargo test`
+    + Create a new package that builds an executable: `cargo new IntmainApp`
+    +  Create a new package that builds a library: `cargo new --lib IntmainLib`
+    +  Build a package and all its dependencies: `cargo build`
+    +  Build a package with optimization: `cargo build -- release`
+    +  Run a binary of local package: `cargo run`.  Arguments to the binary are followed by two dashes (--): `cargo run -- args`
+    +  Remove generated artifacts from the target directory: `cargo clean`
+    +  Display a tree of dependencies in the project: `cargo tree`
+    +  Compile and execute unit, integration, and documentation tests: `cargo test`
 
 4. #### What is Cargo.toml and Cargo.lock?
    The Cargo.toml file is a manifest file where we can specify metadata such as name, version, etc, project settings, and dependencies(crates) for our project. The Cargo.lock file contains exact information about dependencies and Cargo maintains it. If we are building a rust library, then put Cargo.lock in the .gitignore but if we are building end products application then Cargo.lock should be checked into the git repo.
@@ -106,8 +127,8 @@ Rust is a modern computer programming language developed by Mozilla in 2010. It 
     
 10. #### What is unsafe in rust and when to use it?
     Rust guarantees memory safety and it is enforced at runtime, but Rust also provides functionality for bypassing these safety checks and this can be done by placing the code in `unsafe` block. Unsafe code tells the compiler, “Trust me, I know what I’m doing.” `unsafe` keyword is used to mark blocks, functions, or traits that contain code that the compiler cannot guarantee to be safe. Unsafe provides the ability to:
-    1.  Dereference a raw pointer.
-    2.  Call an unsafe function or method.
-    3.  Access or modify a mutable static variable.
-    4.  Implement an unsafe trait.
-    5.  Access fields of `union` Remember that unsafe doesn’t turn off the borrow checker or disable any other of Rust’s safety checks: if you use a reference in unsafe code, it will still be checked.
+    +  Dereference a raw pointer.
+    +  Call an unsafe function or method.
+    +  Access or modify a mutable static variable.
+    +  Implement an unsafe trait.
+    +  Access fields of `union` Remember that unsafe doesn’t turn off the borrow checker or disable any other of Rust’s safety checks: if you use a reference in unsafe code, it will still be checked.
