@@ -132,3 +132,8 @@ Rust prevents all crashes, and it is very interesting that Rust is safe by defau
     +  Access or modify a mutable static variable.
     +  Implement an unsafe trait.
     +  Access fields of `union` Remember that unsafe doesn’t turn off the borrow checker or disable any other of Rust’s safety checks: if you use a reference in unsafe code, it will still be checked.
+
+# Social Media #
+[![Github](https://img.shields.io/badge/-Github-000?style=flat&logo=Github&logoColor=white)](https://github.com/imhq)
+[![Twitter URL](https://img.shields.io/twitter/url/https/twitter.com/bukotsunikki.svg?style=social&label=Follow%20%40bukotsunikki)](https://twitter.com/intmainhq)
+
