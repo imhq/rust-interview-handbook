@@ -3,7 +3,7 @@
 # Rust Interview Handbook
 A curated list of Rust interview preparation materials for busy software engineers. Submit a PR if you know of any other Rust interview questions.
 
-🏆 *Send me a PR if you know of any of Rust's interview questions*
+🏆 *Send me a PR if you know of any Rust interview questions*
 
 ## Overview
 Rust is a modern computer programming language developed by Mozilla in 2010. It was initially developed to tackle the issue of invalid memory access faced by C and C++ developers while building applications. 
