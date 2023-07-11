@@ -139,12 +139,25 @@ Rust prevents all crashes, and, interestingly, Rust is safe by default like Java
     
 10. **What is unsafe in rust and when to use it?**
 
-    Rust guarantees memory safety and it is enforced at runtime, but Rust also provides functionality for bypassing these safety checks and this can be done by placing the code in `unsafe` block. Unsafe code tells the compiler, “Trust me, I know what I’m doing.” `unsafe` keyword is used to mark blocks, functions, or traits that contain code that the compiler cannot guarantee to be safe. Unsafe provides the ability to:
+    Rust guarantees memory safety and it is enforced at runtime, but Rust also provides functionality for bypassing these safety checks and this can be done by placing the code in an `unsafe` block. Unsafe code tells the compiler, “Trust me, I know what I’m doing.” `unsafe` keyword is used to mark blocks, functions, or traits that contain code that the compiler cannot guarantee to be safe. Unsafe provides the ability to:
     +  Dereference a raw pointer.
     +  Call an unsafe function or method.
     +  Access or modify a mutable static variable.
     +  Implement an unsafe trait.
     +  Access fields of `union` Remember that unsafe doesn’t turn off the borrow checker or disable any other of Rust’s safety checks: if you use a reference in unsafe code, it will still be checked.
+
+11. **How does Rust handle concurrency and parallelism?**
+    In Rust, there are various ways to handle concurrency and parallelism, giving developers the ability to write concurrent code that is both safe and efficient. Some of the important features and concepts in Rust when it comes to concurrency and parallelism
+
+    + **Threads:** Rust supports concurrent execution through operating system threads. The `std::thread` module provides facilities for creating and managing threads. Threads can run in parallel, allowing different parts of the program to execute concurrently. 
+Rust's threading model ensures memory safety by enforcing strict ownership and borrowing rules. The `thread::spawn` function is used to create a new thread and execute the code provided as a closure `(|| { ... })` in that thread. The spawn function returns a `JoinHandle` that allows you to wait for the thread to finish using the join method.
+
+    + **Message Passing:** Rust provides the message-passing concurrency model through channels. A channel is a general programming concept by which data is sent from one thread to another. A channel has two halves: a transmitter and a receiver. New channel is created using the `mpsc::channel` function and to use mpsc channels we need to import the `std::sync::mpsc`. 
+This function returns two endpoints of the channel: sender and receiver. The sender endpoint is used by the producer threads to send messages, and the receiver endpoint is used by the main thread to receive those messages. 
+The transmitter has a `send` method that takes the value we want to send. The `send` method returns a `Result<T, E>` type, so if the receiver has already been dropped and there’s nowhere to send a value, the send operation will return an error.
+The receiver has two useful methods: `recv` and `try_recv`. `recv`which will block the main thread’s execution and wait until a value is sent down the channel. Once a value is sent, `recv` will return it in a `Result<T, E>`. When the transmitter closes, `recv` will return an error to signal that no more values will be coming. The `try_recv` method doesn’t block, but will instead return a `Result<T, E>` immediately.
+
+   + **Shared State Concurrency:**
 
 ## Social Media
 [![Github](https://img.shields.io/badge/-Github-000?style=flat&logo=Github&logoColor=white)](https://github.com/imhq)
