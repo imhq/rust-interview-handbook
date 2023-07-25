@@ -146,6 +146,10 @@ Rust prevents all crashes, and, interestingly, Rust is safe by default like Java
     +  Implement an unsafe trait.
     +  Access fields of `union` Remember that unsafe doesn’t turn off the borrow checker or disable any other of Rust’s safety checks: if you use a reference in unsafe code, it will still be checked.
 
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=imhq/rust-interview-handbook&type=Date)](https://star-history.com/#imhq/rust-interview-handbook&Date)
+
 ## Social Media
 [![Github](https://img.shields.io/badge/-Github-000?style=flat&logo=Github&logoColor=white)](https://github.com/imhq)
 [![Twitter URL](https://img.shields.io/twitter/url/https/twitter.com/intmainhq.svg?style=social&label=Follow%20%40IntMainHQ)](https://twitter.com/intmainhq)
